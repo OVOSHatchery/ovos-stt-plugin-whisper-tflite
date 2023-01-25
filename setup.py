@@ -13,7 +13,11 @@ setup(
     author_email='jarbasai@mailfence.com',
     license='Apache-2.0',
     packages=['ovos_stt_plugin_whisper_tflite'],
-    install_requires=["ovos-plugin-manager>=0.0.1"],
+    install_requires=["ovos-plugin-manager>=0.0.1", "openai-whisper"],
+    extras_require={
+        'tflite': ["tflite-runtime"],
+        'full': ["tensorflow"]
+    },
     zip_safe=True,
     classifiers=[
         'Development Status :: 3 - Alpha',
